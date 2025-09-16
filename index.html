@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;24HourLotto - For Active Traders&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--primary: #3498db;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--secondary: #e74c3c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--dark: #2c3e50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--light: #ecf0f1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--success: #2ecc71;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--gold: #ffd700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(44, 62, 80, 0.9);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo span {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--secondary);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 30px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>#countdown {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-width: 120px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-value {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--secondary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prizes-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 40px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prizes-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prize-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 250px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prize-card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-10px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prize-image {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 180px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>object-fit: contain;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prize-name {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prize-description {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.info-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 40px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.info-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.info-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.highlight {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.how-to-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(52, 152, 219, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 40px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.how-to-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.steps {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.step {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.step-number {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.motivation-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(231, 76, 60, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 40px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.motivation-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--secondary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.motivation-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.cta-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, var(--primary), var(--secondary));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.cta-button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-5px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(44, 62, 80, 0.9);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.countdown-box {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>min-width: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.countdown-value {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.prize-card {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>max-width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.step {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo"&gt;24Hour&lt;span&gt;Lotto&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Rewarding the Most Active Traders Every 24 Hours!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="countdown-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="countdown-title"&gt;Next Selection In:&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="countdown"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="countdown-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="countdown-value" id="hours"&gt;24&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="countdown-label"&gt;Hours&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="countdown-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="countdown-value" id="minutes"&gt;00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="countdown-label"&gt;Minutes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="countdown-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="countdown-value" id="seconds"&gt;00&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="countdown-label"&gt;Seconds&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- PRIZES SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="prizes-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title"&gt;Today's Amazing Prizes&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="prizes-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prize-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/81/8128345/iPhone_17_Pro_Max_Cosmic_Orange_PDP_Image_Position_1__pl-PL.jpg" alt="iPhone 17 Pro" class="prize-image"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="prize-name"&gt;iPhone 17 Pro&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="prize-description"&gt;The latest iPhone with revolutionary features and stunning design.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prize-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="data:image/jpeg;base64,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"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="prize-name"&gt;Apple Mac Pro&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="prize-description"&gt;Extreme performance for professionals. The ultimate desktop machine.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prize-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhMWFRUXGBgYFRgYFRgWFRgXFxgYFxcXFR0YHSogGholGxUVITEhJSkrLi4vFx8zODMtNygtLisBCgoKDg0OGxAQGy0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAMFBgcCAQj/xABLEAACAAMEBAkHCQYFBAMAAAABAgADEQQSITEFQVFxBgcTImGBkbHBMkJzobLR8BQjM1JicpKzwiQ0dIKi4SVDU4PxFTVkkxZjo//EABsBAAIDAQEBAAAAAAAAAAAAAAADAQIEBQYH/8QAOhEAAgECAwUFBgYCAgIDAAAAAAECAxEEITEFEkFRcQYTMmGBIjM0kaGxFELB0eHwFSNScpLxNUNi/9oADAMBAAIRAxEAPwDcYAFAAoAFAAoAFAAoAFAAoAFAB4zAZmkBKTYNN0hKXypssb3UeMVcorVjI0KstIv5MDm8JLIudol9TV7oq6sFxHx2fiZaU38gSbw0sS/5tdyMfCKuvTXEfHY+Ml+T7Ak3h/ZRkJrblA7zFfxMB8dgYp62XqCTeMaV5shzvZR3VijxceCHx7O1eM19QObxjN5tnUb3J7lirxfJD49nF+ap9ASbxg2k5JKXqY+MVeKlyRoj2eoLWTf0BJvDe2HJ1Xcg8axT8TUHx2FhFqm/UEm8KbY2dofqoO4RXv6nMfHZOEj+RfUEm6XtDeVPmn/cb3xV1Jvix8cFh46U18hqVbpqm8sxwdoc174hTlzGSw1GS3XFW6E3YeGtrl5uJg+2Me0UMNjiZrzObW2HhZ6Jx6FgsPGIhwnSWXpQhh2Ghh8cWuKOVW7O1F7uSfXIsFh4TWWb5M5Qdjc0/wBUPjWhLRnKrbNxNHxQfpmTCsCKg1EMMTVtT2ABQAKABi0WuWnluqfeYDviG0tS8ISm7RVwCbwlsi52iX1NXuijqwXE0x2fipaU38gObw0sQ/zSdyOfCKuvTXEfHY2Mf5LeqBJvGBZRkJrbkA7yIo8VAfHYOKetl6gk3jGl+bIc72Ud1Yr+LjyHx7O1uM19QSbxjP5tnUb3J7hFXi+SNEezi/NU+gJN4wbSfJSUvUx/VFHi5ch8ez1BaybBJvDe2Hz1Xci+NYq8TMfHYWEWqb6sEm8KLY2dofqovcIr39R8R8dk4SP5F9Rj5Za5grylocbQ0wj1YRG9UfFl+5wdPLdivkNNY5zGhDEnUzAE/iMRuzZZV8NHNW+X8HY0NNxqoFM8QSN4Wpg7qRX8fQ4P6f8Ao9XRD0DEgKcjcmgHcSgB7YnumQ9oQvZLPqv3YQ2gWGZNcKgCXUV10M0GnTSLdz/f6xH+Ui+Hq72+iHDoGmsnX5QA7QGHVnB3SK/5NvS31/g8OjJS5suIrVphC7jVFYdkT3cUQsbWlmk//H7ZscWRZAMWWv1qlh1Ks01HTUbom0EU7zGt5J29PvbI4WbZARkwpiLjCvStUw3EmIvTRfcxklxXr98weXPswY30Z1xoAtxujnB6f0RXehfNf35j+6xbilGVn5u6+Vr/AFIx6VNMBXAE1NNQJ1wrLgdCKdlfU8iCwoAFAB6BE2Iuj0yzsMSosjeXMesuk5knFJ5l7pgA6xWkXi5rRiKuGo1vHBP0/UnLHxizpf0kyVMHT5Xanuh0cRNa2OZV2BQnnBSj9vqW3grw3k22ZyKqwcIXOZWgKg4kA15w1Rpp1lN2ODj9k1MJBVG7xfzLXDjlGbcZJYWmXda6eSGunnvD6Vt13RmqylGacXYqLTD56A9IF09q4doMUnhKM+Fjfh9u46hlvby88/qci4cmK/eFR2r7oxz2c14Xc7uG7U0pZVoW6ZnpkNmBUbVN4ddMuuMc6FSGqO/h9o4Wur05r9RusJNookBRACgAUABs3Ss11VZhEwIKJeUVUbAwo3rhjqNqzMccDSjJyh7Letn+juvoPf8AXJty4aFdQJmNTcS9R1RPeu1hf+Npb28m7+n2tY5macnmgv4DKoDU3X6mDvZEx2dh1fL++lkMHSM0155xzoAtd90CI35cxqwdCP5fn/Jy1omnN5h/mYxF5MuqNGOaivoMP9o9pA74izGJxWg0ZyDz0/ED3GDdLZvg/kcNbZQ/zB1Bj4QbvmTaT4DbaSlDWx3L7zE2XMncnyODpZNSsewe+CyJ7qfkNnTA1S+1vcIMie5lz+g22mG1In9R/VBkW7nzf0G20rM1FR/KviDBcnuY/wBZwdIzfrkbqDuibsnuYchprU5zdj/MYi7J7uK4IZdtZPWYEm9CJzhTV5NJeYLO0jLXXXd78ofHDTZyMRt/CUsovefl+4DO0yfNFPX/AGjTDBricHE9p60sqSUfq/2L3xDWln0nMvEkfJpn5snqh/dKCyRw6uNrYh2qSb6/sfQMAozTjLYi1S6f6I2U8ttsaKWjMmIdpLoVITRjUU+6abNRwMMsJ3r6ntVOJprwpdY7MsKwZonJiNnpiCVOqvvEF+ZG7Z3WR7ffWA9Nef8AUuPrhU8PSnqjoYfauNoZQm2uTzRxVDtX+oeBHrjHU2cvys7uH7VNZV4eq/kFtFsloxUtiDQ0U5g010jnOFm0z18JOcFOKydvqMnSsvY56gPGIsh3dz8httMLqQ9bAfpgsiVRlxaG20wdSL1lj3EQZE9y+LODpd9QQfy17yYLk9yuLY2dJzfrU3Ko8ILk9zDkcNbpp/zG/ER3QXJVKC4CkSZ043UWZNOsKGc9grArvQrUqUqSvNpdbI5tVimSiBNlvLJyDoyE7rwgd1qTSrUqucJJ9GMwDTyAkUBAoAFAAoAOZkwL5RA3mLRhKWiM9fF0KCvUml6gc7SqLlj6h64fHCyepxMT2lw8Mqacn8kR0/TbHycNw98aYYWK1OFiO0OLq5Re6vLX5gonO5qT498ao0kjiVq9So7ybfXM8CVhiiZXPmdcjFt0pvmkcQKEaTmfw0z82TCZrIfSabPoSFDzMuM795l1/wBIbfrvsjRR0ZkxHiRU1mc0ilc8uqnTqhtsxCeTRxhjTDoO7H1gxN2GQXOsbIEZTW9SgGGJFdxhcZqVxkqbik+YxyhBNRjU44qQerCL7pTea1GXYnExYoyC0t9NN9I3tx52p42fYcJ8LT6RBoWbSX4N6Ae1zCqsERBemzG8lF2nacDh0GL04ObsjDj8fDCQTau3kkuLLJYNC6HaakkWm0TXZggurdQsTTO5l1mGRjSva7Zya2M2pGm6jpxjHXz+/wCgXwQ4L2WbardKmyy6yJgWXV2FBemLjdIrggzi9KlFyknwEbS2niaeHoThKzlG7yXJE1wi4vLM8pjZk5KaoqtGYq1PNYMTntHRnlDKmHjb2dTn4Lb2IhUSrPei9eaKBwK4OfLZ5Rmuy0AaZlfIrQBQdZOvV2RlpU+8lY9NtXaP4SipRV29OXU1+ZaLHYJSqWlyE80a2pmaDnMdpxje3CmuR4aNPFY6o5JOT/vyHGFmt0giqzpT1FRqPRrVh2xPs1I8yq7/AAVZaxkjCtO6ONntE2QTW4xAO1c1PWpBjmSjuyaPo+CxCxFCNXmgCINJ7AFxqbaFXNhuzPqi8aU5aIwYjamFoeOavyWf2ApullyUV3/2jTDByepwsT2ohHKlD1f7Ak23TDru7vjxjXDCRWqPPYnb+KrZb1lyWQMqlsSY0xpRRypVZSd2zt5YplDd1IqmATJUKlEZcJsgi8Ck52Vgi7EmW56EgIuaPxEL/iMz+Gf8yVCavhH0H7ZvkINpmnGZ+9SsK/NfqeNFHwsyYjxIqJWmRIHaK9fvMN6ibchubMNcR6vWKxKSKybPVnnmi8RQ6zUDpA1a4hxQb7Vsxx5xapNDUjLq1ZwWsW3riAUh6mjXajpNRhvpWIzugss7ld0t9NN9I3txwKnjl1PruE+FpdIgsLNxcNFmmh59Gu37Ukt2+wFlnGmYFSadJh0fdPqcDE3e1IZXtBtLzzLJpTQNis0+wGz0Exp6DyyxeXiS5xpndxH1odKEIyju8zk0cbi8RSrqt4d18NHfQL4Cfv2lPTD8ydFqPjn1E7W+Dw3/AF/RF4EaTgrU+eLNpGZZ7QZ0prrq7U2EVNQRrB2RyVJxldcz6dLD08Rh1TqK6aX21ONL6UmWma06c15j2KupVGpRs8YJScnvMvhcNTw1NU6ay/upr3FroiZZ7J87zWmtyl04FVKqBe2Eha9FRG/DwcY58Tw+3cXDEYr2NErX5syzhfb1n22fNTFWeinaEAQMOgha9cYqkt6bZ7HZdCVDCQhLW2frmQ8UN5HacmEICDTGNeEim3c8t2nqSjCCi7ZshRjnHVUEjwkpM6Uxco8xytcIkqkEBYvYvc8dcIGiFI5EmuERulZVLDgkRUQ53HxKgFuR6JcBG8aFxGr+3v8Aw7/mSoTU8Jqwr/2G7Qg6JmXGb+9SvRfqeNFHwsyYjxIq1Pj4yhgo8Px8e+ADiZLG71fHZE3KtIb5HYfjuibkbvI5auuJRVkLpb6aZ6RvbjztTxy6n2HCfC0+kQWFm4ttk/7JO/jB+XLh3/0+pw6n/wAvH/o/1IrgeP26zelTvEUpeNG3anwdToX7gskw2nTAkkCYXYSycg5afdPbSNVO9525nmce4KhhHU8NlfpkPcWeh7ZJec9pDqrUAV2qWcHF8zqwrrr0RGGhNXciu3MVhKyhGha64pWy5GU2v6R/vN3mMb4ns6Pu49F9jSeLzgTS7a7UuOBkyzq2THG3YNWeymuhR/NL5Hk9t7Z3r0KDy4v9F+51xkcMQoax2duccJzg+SNctftHWdWWeU4it+SPqV2JsreaxFfTgnx82ZgyEZgjeKRjPYxkmsmcwEkbpwcwb/dG3BeJnku1btCn1ZGiVUYR2LZHgnPPM7WymDdZXvUdSJOMTFXZEp2QUJcOURTqnFyIaDfC7LIzMFjPUqcBxZcKRVyGJhpFWMirngmiIuS4M0HiOcG3v/Dv+ZKhNTQ14VNVDdISdIzLjN/e5Xov1PGij4WZMR40Vb4/5i4oR+P7xICp8e+ADgyxu3YdsFyLHLSuuJuVcSA0t9NN9I3tR5+p431Pr+E+Fp9IgsLNxcdFSTM0NaVQXmS0rMYDMJcQXt2DfhMOir0WlwdzgYiap7Vpylo4tLqQ3BA/t1m9KneIpSfto6G1Pg6nQ0fgJ+/aU9MPzJ0a6Pjn1PKbW+Dw3/X9EWzTOkks0l50w0CAnpLeao2kmgh85KKuzj4XDzr1Y04LNv5IyLi2sCWi3fPKGuo00Dzb4ZQCRrHOJpujBh4qU8z2u3K08Pg0qbtdpeljZ5kwLixA3kDvjoXR4RRk9ERbaUsMr/OsyHYHlg9gNYo5046tGuOGxlRZRm/RmT8ZFvlT7ZfkusxeTQXlxFReqPWIw15KU7o9psKhUo4XdqRs7vUq0KOyR+mRzV3+6NuB8R5Dtb7uHqDWMZ1jsxdj57V8gyUkSjNJ2HDKAbeIvHUjfbiNzm1CLtlop6nEsRUtJhiYLETdkZ3nIbcwksgS0NhFWPgswF2iDSkaPxCf9wmfw7/mSoVPQ0UfGb9CjWZjxnfvUr0Q9t400fCzHiPGirBvj41xcUe/Hx0wEiiAF8f8wAJsju+KxK1B6Fb0v9NM9IfajgVPHLqfXMJ8LT6RBYWbiT0Bp2dZJnKSWAqKMrCqMNjDxBBi0JuDujHjcDSxcN2oujWqLEeMSYprKslllnMnkyTXbgRDfxD/AOKOWuz8HlOrNohrHwrtMqZPmymVGntemUQEVqx5t6tBVzFFVmm2uJuq7Kw9WEITTagrLME0ppu0Wojl5rTKeSMAAehVFK9UUlUlPV3H4bBYfDJ93FL+8weSk1WIUTFYKS128GCAXiTTG7THZEZobOVGcVvbrV/S/wC47J0ZOmTGQLV1W819lWi4UJLkDzl164N1t6C5YmhTpqd8nkrL9hyw6FmTGZKpLKMEblGuDlGJCyx9olW/Ca0iVB6LIitjadOMZZu+eSvlxfQj5iFSVIoQSCNhGYiDVGSlFNaM5gJAdLZLvPhG7A+M8f2u91D1IyZOpgI6jkeDjC+bCbJaTBGTE1aZ7arWb2GqBzdwp0UoilPWHqSZEo2HWmUgckiii2PSp1RCXK4uULM8d4gFECtUyIbNNOIITED0jSuII/4hM/h3/MlQueg2l4zf4UazMuM796lei6frPsjRR8LMmI8SKi209px/qXxhpnse1+Mxj0rBYnM9M0f8UgsS5HSuDl8f3iGgudMMDuiOJL0K1pj6ab6Q+1HBqeNn1zCfC0+kQWFm4k9BSJLu4nkqgluag4hsACB51K1u66RMUr+1yMWNqVoQToq7bX6/LqP2+RIRrUqlGuiWJJDFgTfl3yh14X4mSScvT+RVCeInGlKV829762udaUtNmMhFlKFnD5OGouDXZBvtWmDGY1CMjcBiZONrLXL7FcPTxEazdV+x7VvK8svS2nLQKGlZjWmzTyk11lGUhASnztBeVaYXmYVAwJid5uSbvl9xX4WnHD1KSlFOV3r+W+X0CrVJtciZNtos81EuXb0yilSwVASNeOrXXGLS34yc7CKUsLWpRwrqJu97K+dsx60aLtY5a2tZ5N15QLyGfnLKFwhrgYNQcmpoTXVSJ3Z5zssykMRhWoYVTlk8pJZN55X9QPR0m0/KpcszJYe2BJ4YoJgUvfdHAZebMWrZZViEpKaX/LMdWnhnh5T3XaneNr2vpdeaZV5mZqampx29MJZ24NOKscwFiO055K02+6NuC8TseR7WeCF/MipcunTHVjE8JKVx9GGrOLNIW0KRZ5kw0lozkfVUseughLYxRb0JKRwctBxa5KG2Y4HqWreqI37F+5bJCTwel/5k8t0S0w6nY/piHJllQRK2PRchfJlXumY5J7Fop7IjeZb8PDkQGmXHLOtAooCoChVFEBoKCkRGWZNShFwyRBO1YcZUhuCxc0ziEX/EZn8M/wCZKitRWQyl4j6AhBqM04y5dbVL9F+p4fSdosy11eSKiQRiajpr4jLdhDtRDy1GwmsGnx0f3guVUeRyynMxa6KtM5gAflkxV2LK5AaZ+nm+kb2o8/U8bPr+E+Fp9IgkLNxMcFks5nj5UQEusVvXrhmU5gmFcQlc6Renu73taGDaTxCo/wCjW601txt5llSSFtNknPLsLSGmtJZrKLyFpigATA2TAG8IbZKUXZW0yOPvuVCrCMqimkpJT1y5WJjR+gZarJsr0v2WYtqmthzkLzajqWXKPWIZGmlaPFZmGrjqk5Trx0qLcXVJfuyrzLa0zR0+fUhmt4mVBoQShYEEZEGEXvSb8zrRoxhjqdJ6KnY903pE8lo55jNMopaYCxYtdnVo1TiSBrgqSdoXJwmGXe4mEFbgstMnoOcJbFZ5kyfbPl0tlmAtKRatPLGlJbr5qjAVOqJqxi25bxXA1q9OEMN3LvF5t6W5p8wqxcNuSmWNFmfMS5EpZ4EoX76oQy1YVIBu5GkW76zjbTiKnsZ1IVZOPtuT3c8rX15FJtBTArerm1QAK9FDiN8IdnoegpKcY2lbLkJLM5yU02nAdpwi0acpaITWx+GpeOaXqC6Rsi83lJ0uWBiatU9VMD2xuwtOVN3keO7QY6hjFGFF6f3IDBsa5vNmn7ICD119Rja6p5iNBLUIkW6WPorNLHS45U/11p1RRzbGqnFBwts98GcgbAaAbqZRBZKwRIs9cSantPbEASlms4gAOWViIAKLwhry0vHAmZT/ANUutYpH3g+fuV6kGY2WOUdypdTFkiyV2adxEJS3zP4d/wAyVFKy9hGqELZm8xlGGdcYv7zL9F+p4dT0M9XxIqVrGHxX47IZETPQDQCvNNIZmJSXA7qw1V3Z9mrsiMibtDiIG+PjviG7F0kzufKoBSITzCcbLIrWmPppvpD7UcGp45H1zCfC0+kQSFm4M0ZbzJe+ElvgQVmIHQg51BiYtxd0IxGHVeG621ne6dmEaU07NnhFNyWiGqS5SCXLVjmwA19JrEym3/AnD4ClRu823q5O7fl0GbRpee7vMac5dxddrxBZaAXTTzcBhEbzve4yGDoQgoKKsnddeYHfNKVNM6VwrtpFTRuq9+IlHSB0k0EXhBydkZ8Vi6WFp95UdkDztIWdPKnA9CAt8dkaFhHxZwK3aemvdwb65AU3hHJGCS2c/aNB6qGHrD00cmt2gxk/C1Hov3B34RWg/RosvpAFe3XDFCK0RzK2NxFb3k2/UDmz58zy5zdR91IuZTmVYlzJJgAlbBYGb6OWWpmQpIG85DriQC5S0gID5AgAkJTqMyBvNIADZVulgVLinRj3QAH2K1y5uMt1emdCDTfsgAofCM/Oyt838uXC4+8Zon7iPqQYrG85e6H2STWGxiPppLM0riPSlumfw7fmS4ViFaCGpm4xiLGbcZR/apfov1PD6WjMtfxIqk58sP7fHVDUhMmMEKfinx64nMpkz0SyMj1GC5NmgmW+GI64o9RsXlmdEAjCI4k5Mqumfp5vpD7UcOp42fWMJ8LT6RBIWbhQAKABQAKAALTqHkWFDU3aCmfOGUacMnvHnO0c4ywqs0/aIaw6DnuMLNObdKcjupG88OSScGbVrk3B9t5cv22BgAfXgzN86ZIX/dvH/wDMNEgcW3Q4loX5dHII5qq4zNPKcAQAN6DsYnT5UktS+wBIxIGbEaq0Bispbsbl6cHUmoriW226NWxtyaTWYHnFiLhxwpgT9XPpitKpvq5fE0O5nugc8BvKxO3zu3OGCCB0g7KfKNOztp8eASN2edABIyZkBALpAPKItMglXXFqZEa9/SNldkBItJsZjWcjNjMpvMuXC4+8foPn7iPqRyy8aR0Yq5zdCassugEalEbDQ0PiYSlsf0De3LjNivAi0HmbNHPGmccZI/aZfov1PD6Whlr+JFWdKjDMfHV6ovcW1dZAzjHnCL9BT8zzk9hiQtyHZc0gY/HXFWi6k0OXorYtdFX019PN9IfajhVPGz6zg/hafSIJCzoCgIFAAXo+wNNai5DEk5AbT8d4hlOm5uxz9o7Rp4KnvSzb0XMlCkuVggvH6xw7APGu4ZR0IUYQWR4TF7VxOJftSsuSyQLMt8yl1HKAspIXmA84Z3aVhxzmxTp7N5TM28k98QAMYAGmMAEbptvmm3jvEAHvF1LLW6XTzVdjuulcOtxCMQ7U2btnxvXj5XLJwlN+e+JwNMNgAqImgrU0Ux0t6vIjZzXVB1VpnlqhxkIjSorhtB7q1gJIuyTIAJeQ0BAS+KkHIjHrw8YCSKnkhLNjiOV7Qie6Frxs0S9zH1CdIUMy+PPCv+IY+sR0KDujm1smHWM1jYTGWRoXE4P2x/QN7cuMuK92i9PxGxxzx5mnGVagtrlKRnJr0+W+W2LxlZCqkbsraPX3HP390MU0xLi0czZZzGIhiaFST4DQAPQYsVyOyDvipZ3PAMdnRBcCtaa+nm+kPtRwanjl1PreD+FpdIgkLOgKAgUAMtxlCRZkUeU4Dv1iqjsPrMdWjBRgkfM9p4uWJxEp8NF0ISaTSurbqhtjnXAlSjA3icRnTaIFqD0CWMBI0xiAGnMAEZplS0ogYmq94gAmuK3R7LOnTHFKSwoxB8pqnI4eRGPFvJI6+yo+3KXkcaSty1mMxoSSy9NThTt9Ua0rKxy6kt6TlzA+RvXSzMASDdrzb2cSUAdKuAzAGoCsR1Ix8IgkhbI0AEzZmiQCpp5p6u8RIELO8sdfsNFHqSScwVSWfsL3RtoPI52KlaoO2CbGyLuVVSxpXE037W/oG9uXGbFe7RpoyvI2SOeajI+N8ftck0JHI6vvP74hkMq1lt4qBWvxs1dXbFU7Mq0TAYnEGoMaotNGeUWjh5qgc7A7DEuViFG6OBPSoo2cQ6iBQYQwqMPj3QRlcJKxUdM/TTfvn2o4tTxyPq+D+Fp9IgkLOgKAgeskq86L9ZlHaQPGLQ8SM+Mk44ebX/F/Ytmnp68ozMKqgLU20wA9Yjsx5nymV9OZXLbpSZUfOGpoLoAuDoApX4y1RF2G4rAKzgzAjAEqabK0NB0YxL1Ii7xC2MQMGmMQQMuYAI3TT0lE9K94gZKLPxdVWxWiefOYhdyJ72I6oxVvaqxR2MF7GGqS/uhHTQNlaZRtOMCTpwmPghC3aNVaAnDUYAIu30UPQZIf6iE/XEEkXZYAJiytEgFzTzD1d4gAjrXKAEptbcrX+VBTvMLv7TQ5xSpqXUMDcxPuCNlJ5HIxa9sHkvQmNEJCZo0riOmVt0wf+O35kuFYiV4I0YVf7GblGI6BlnGtbAlqlBhUGT3O0F7BYzu2Bb15Dg2NNmuKSsVZ7ZtJOjYGo6YFKxVhFq0kHulsMDux+NnXFm2wSBiobI+Iyy/tUmKMLEnoya6EqakduHhF4SsUlEitMn56Yftn2o5tTxy6n1LB/C0ukQSFm8UAB2g1raJPpEPYwhlKLc0YNqVY0sJNyfC3zJTT785xqIIPbXvA9cddPmfL5J2y4FQnA16doLE9QKih6TWkFlzDek8krdQmySyKV2jvERe7uTaysGO1M4gsMGetaXhXZUViAA5+kZatdLY68MBvMSSM6UWssjpHfEAXHRaclolBrfH8blh6u6MUfaxHQ67bhgbW1/VkXIst5b7MEStAaVLHYo1/HTG2/I5Sjld5AVqoMVa8MjhdIJyqOo/2iL8wcVa8WV/SkzmN0si9XOY9yxJUBs8AErZjEgGTDzD1d4gIBLb5Ej/e9lYV+dmmXuY+o+q1CVyuCNUHkc6rS35nChdkOi2MlRhY0DiJ/wC4TR/47/mS4XW8IujG02bzGY1GScckq9aJQ/8Aq/W0Lm7MN6xn8qxkA1z1dUVuQ8xsyaHsw2b/AHQ2MLlRqeKUJyyPvHuhjWQIdlSDKdlJ52BBGsHIjaCIzsm1g2VpELQNTZlFoMqwbSprNc/a8RHOn42fT8H8LT6RBoobxQAP2Cbdn2YDN56D+VWBPrK9kbMJHWR4/tPiHvQorq/0JjS5553xtPJkJaXUEZGtNX1sqGuMAHpzG8d8C1IegzbZZLhajAMa4MMGUVG3AnHpiE7okhWA5RDUVBlimvIYwEi0gUxlJdFTV2NKDGvbAARbpgEqtcMKeHhAQXfT45OzSJWwAdSIB3mMmGzm2djaPsUoQ/uSIK0W+6FAFfmwFpjn5faw9RjVFnLqZNdCFmTjzic2wprzVqHpovrED1COUWROkzzE6Wc9l1R3NElRiRAQSdmMSAa55p6u8QADW4fN2fdO9lYUvGzRJ/6o+op82ioPsCNMdBEVcHEyHQIkaVxCn/EJv8O/5kuKVvCLgsze4zDTKuNlf2qV6L9bQmpqisiizbRXmrnrPu98XhT4sgHZYeAPOWoIiSCSscuXOkgNMCzJVACRjdIBoccRUkdFDGZs0uDehE2ywtnnTMRXeQloe0h5bbx4Rhn4mfTcJ8LT6IYihvFAQNyH/bbKNjy+1nvdxEdOgrQR842zV7zGzfLL5Exp60hWaufVgNpr2Q45RFIiYTCDXA3anDbQasCcoAGpNoLvUCgwyFBWurqgRD0O7RmDeukVAwqDXEj+kQEgPyZA1/nErhlhVaCsBIO9mlVJu1OJNW6655EVPVEAEvKDcnL1GZKXooXAis3aLGUY71SK5tFu4ZzqzEXYlfxH+wjPg17DZ0dryvWUeSKtaFvCmBGwgGh102ZeqNLijmKbSt9wObKoKnVlqA3RKViHJsB0oPmpf2TT/wBiib+r1QEAckwASFnMSAaTzT8axAA1b/orPun+ysKXiY+Xu4+oPbGwT7i+MaItIXFA6vDIySKyNN4gXrpGaP8Ax3/MlxWpNNZFIrM+gIQXMu41VraZQH+l+t4VU1RFruxl9kmVCvXPDr1xoWhVvgGMYmwIaYRFybFfnT6M2JwYjvI6qwqSuPhJplskzAyK41qK79cZ3qLqxs7gelvpX+94iMkvEz6Vg/hafRAsVOgKAq2krg1mP+Iy+ici/hIXwjrpWyPlFWbnOU3xbZOaXlqz1ZQaHCoBpuiwsiZ81yyrQgCmy6KZka6n3wAd1xG8d8SiHoNWhSaUNKGvxtiCwIbINbE79xXub1QAczLOpwOI2asqeMABuilrPlffB7KmE13amzXgFfERuSHCabenvTVQDqH9zBQjamicfPexEiHQUHwdVPCHGIGtzYUGZiCQC1teSdsWatNwqg9QEAAEowAW3g3o1CqTp1brvdUDGiKwEyZTWa1AH2W6IyYmtutQTO/sbZ6rKVaavu6J6N+ZL8IptkN1JVPJ5zIswqG5uALVrQ1qQaGuUUT3XeHqbKsadWDhiLKX5cldfLh5FYtQa4EuksObLABJJcAUAGZJpGxW1PMNysovgGrYFKpyim8FCkGoIIzBG0GsZsRVlGVkz0+w9mYbE0HUqxu7+Z2LDL+ovZXvjN3s+Z347IwUdKS+VzQOJaUotr0AHzDZADz5cPw8m5O7ONt6hSp4SO5FLNaK3A2uNh48y7jValplHZKHttCamqJi/aRkjyDLYy8aA3l3VI8PWIfCScSs4tSyJJZlRFrkHDTBEAyE0nK514ZMMfvDERVl1mWLRI+aw1eIjPJDK2cUN6W+lf73iIxPVn0bB/C0+kQWKnQHbOtWUbWHfF6avNIx4+e5hqkv/wAsidGza2yU22cD2vXxjqny8sFumVYxJABObDCABlDj1+6JWpD0EzRBI0zQANM0ABWhm+fTee4wmvnBm3AZV16/YVvmXnZtrE+v3QyKtFIzVJb03LmwesWFgNpnUav1Re7Mh1tdHXEEgMhPmJp6U9r+8BJ5o6xNMyyirlYlRuadYdAibZrMrsJUsSW5Ri126Ec3iTqVrxav2aYVjnza7+/Q79HEShge6WWt/P1JyXoWXZ7Jy0yckxxJZLksqwmO7qJdxjmfNG0vDpSgpyhHPz5HPjUrSUZzWl7+ZHaN+TJZ/laoi2hp7iW0xh82FzaUK3VF5iL1O6NFBNrMri4QhUSjy4+ZEcKGkm0M0jBWxIvXwGJN6jedXBq7WMYsV7z5Hsuz7l+DV+bIiEHaL3xM/vr+gb25cacN4mea7RfCQ6r7M2mNx4oyvjaB+Uyjq5Gh/G0JqlJO2Znel5d6Uk4ZobkzcebXtuxamx9RaMEs0p7l8g3CaA9IGR2Hvh1xVhPEEAtolllJA5oIBPSYrJl4K7DdAWsKbjeScD0VhUh1rqw/pgUnTB9rxEYJas+i4RWwtPogSKm8IsP0i7+4Ew6gr1EcnbcrYGp6fdFZsL3Zkptjof6hWOkfOSxT5mJ3xJAM7wANBsRvgWpD0OWeAkaZoAOGaAkcsU67MU7+4wuorodQnuT3vJ/Y6Z4YIBp8+giCSMtLk8wYkmrU6Ml6sSemmyAAmcl2zlRiWZRhrI5x7KCDgSTnBexkUBVhqxGvMwiox8EaDo55iynkXRMl3H+bYChB8pQaVANb3UYx1Vb2joYSEZ1FTk8iN4N8GJloM2XIZpBVSQZl5xLLk0EpcDWhfnYUGomhjRhpqpL2lktfMftHCrCRTjJO97eQXpfgUsiWp5dJl1VVh5NXJugoNhOFKn1xpnHdvJaX+SOPdzl7WpWLTo51AwyGJ1RgrNSldHs9h1XTw6hPnkAAwg9AmX3iZ/fX9A3tpGnDeJnm+0XwkOq+zNojceKM14zgflEvCo5LH8TQWTIZQUlKkxkYVlTlKsNhyPqhTW7mOp5xsAWW2TLJNMh6EGjA6mGVR1AddREzvqi1NLwsa0nJuuQuN6hTpDZe7qhillcRNWYbKsyhOTzrn0k5mMrld3F3tmQ82xtKaua7ffsMMTuaozTC9Jn5xt48Iwy8TPo2F+Gp9EMRQ3D1iNHHX3GHYf3iOTtyN8DU9Puis26VdZl2HDdqPZHSPnQcmkAxBqKtjSuvWO2sSA4zwAcK2IgRD0OS0BI2WgA4JiAPFJqKdPcYrKW6rmjDYd16ipp2bOzLOtvVCfxKOmth1OMkNNJ+0B1VbqNcOoRX8R5F/wDCpfn+n8gAsswGgFRthvfQtcxf4vEb1kvUnNF6PLOuJqooBhmczTpw7ITKszpU9jwS9tu/VGpaLs6S5agqKgAnpPThGaU29BcsJFXSBOFFlFhSa8lSGYLzmYsUWZXAHK8HZBWmNCTqo2dZSrKm+KuZPDST43ZWdA8LphllXmPeCvdYHnlgVKj+ojXWsa6MN2oksrmWda8HfOxK6L06k5q2qXKdCZirVFcqVNEZxmaNqqDQA7ypU7ms43yOxs/DQxuDb3VvJ+rXXh1LBwm4NsAjSpg5F1KsCpDCZqxJrQ59R24IxKSlvNa+nqLwWOlTkorJRemuRD2Hi+nPnOlKOi8x7h3wiFBy4o7VXtFQhkoNlz4u+CXyWcZxnXy0orS5dAqynO8a5RqpUdx3ucPaW2PxlJUty1nfW/6GhQ84hQOML6dPRj2mgApVvsImKB5ON5TTZUZbMYhq6sWjLdYBpvRLTJYNAZkvFCPOGtDv1dI6YpZrUZdN3Q1Klq8tGPlS6jqPu8TC75WIrx4iuxQzHMxcDXEQcQ0I7SgpMYdI8Iyy1Z9PwfwtPpEsfBHgqlpltNmuwUNdUJQEkAEkkg4c4Cm+GUqW8rsy7R2lOhU7umlpdtlpkcDrIhFJTO1eaDMapOoc0gfB1Q+NGKd0cPE7SrzptTlk8rWQTauDFllMA9ks9fNJRZoOsgGYK1Gzr201XPNHc+xS2kzJZRBLKMCoUBfJOQAoIq5WHU6LlrkYGCw+1uisa0XqaquzMRB5K/Q9vsclbMaqRPfQ5lI7NxUvyM6uzD5naYq8RA0w2Ji5flt6nossw7B2xR4qPA1U+zteWskdjR7a3hbxfJGyHZpLxzD7Lwdmt5Mua+5GPcIo605ZW+hqpbKwWHe85q/Ul7PwItTZWdv5iq+0YqoVXwHPF7Op6zT+bC24FTE+kmWeUQKkPN5wG0hQdo7YsqFR8hMtuYCGib9P3CpPA4iaqsWdBTlLkuYmJKhUqwB89CThQMuOOCq9CvGH+tXl9vmZK236dSLjFOP3fkuXUP0roEfSSrNJCorsRNEsS1QDnVEslg63SxwvYHWKRqwEJ06Tp1+KWazd0+N+FuR43EKtWquSduWeYdZy0iUeWmSlFCy1JnOt1JrvJYGhdl5CYKipxA51CTMqEW7pnQpYutGmozdyB4dcI/lVnmBWVpdJZcqvOEwok5QKM3NHknHOuVDCpYeHfqonnZ/IsqknBrgZ7odZvKS5qoaKa1IopIypXPEA9Uas+BWko7y3tDTuC+k7FLs7FpazZuQV5YvTFoEShYUQKQbx1gVxjfRtOMIppc+vEzV5d3UnKF9cuhbJGk5c9fk4LKSQqMh5ROURb0xpYep5JTRb2stQbYMRh9+Of95CqNfdllqM8DdJcqjg0DI91qZHMBh0YH1Rz6cN26NdWW/Zlu4OPW79z3Q0ST0AFA4wXInpT/S/U0AFcc1wrh0bNxgAHfoyFIAGHs6mtRn2xVxTJbdrAk+yMBzce+Fum+BRoFmA5UptijIsRWlfpX+8PCMctWfTsH8LT6I0Ti8YCxknACa9fwpGmgvZ9ThbXdsU2+SLe2j05F5loYy1uliahTLlrzmJJyJAx2DDaTqirHmK1XfeWgHwP+ST5U3kgxN4LOVhNRhhflELMVSvNcMGAGeGUWEj9rsDreQ4gq11sq4HBqZN6jiRrAXKPI3UsTCy3vIz/RfASW5RGZi5ALUIVBzanEqTQRwHXqOu6EFdrnodWt2knvNUoK3C5JzeBlmlOJby714AhhMfJsAwoQNR1RSdarTrxpytZ205MxS7QYy+qXRI60dwJsnnB2+89PZAjvLDQHT7Q4uWll6fuT0jg9o2WMZUimGMxr+eX0jHOLqhTXAx1NrYyetR+mR1M0rYZSryfJAMDdMuXVcLn1Fz+cTDPGLqKWiMc8RVn4pN+rGRpoHyJU5jdZsUKiqgkKcCQWpQYHMYYxYU8w6Xab1RS6RqJBNCMDgcAenHAwARh0Vanc3bUAlaqgk4D5y+Gdr9S2Etfq0TFTUERYlMrNqmckHU2mfOeV82UUAseSmNKDOVWoNJUqprhdbKojjzxVd1+7S3Y3tveWX8muFC8N76Fa0hpJSxvspbmrV7Qzkol4AqoZmDXHcVAU1vHJiI6eJlCTSoXy42evrYyUqFXvIyqSSje7z4cjnRujp02TNMmzM6BJyByFS9NnUckA0JornCgFbv1YrV3pQhF5Wab87DFRpwrSqRle+nJL++SJTghwWeX87aaqxpRQcBSudMCcuyM9WrnZG2jBq7fHIY4S8Ggktpkhy9CTdzIWuFK4kjftghWbdiatNJXSKxwbsD2h2UXluYlmrXcBX/AIh07xV/sUp1YuSTjlxCeEFpnWWYos8915tGcNia4Fdopj4RahWk7pv0F4qEW7xRfOK+yiXZq3hecghagkIootQMicTupDomVtmgcF3513Wq0I15j4rFipZYAKdw40HPnOs2UocKl0qDR61JqAcCMdtYAKTMQqSpUq2uoKsN4PjAAI9V3Hs3GAB1DWABa+uAD2bJBGYIpWhz15dQrBYCe/8AjFkIWYZV5m5MklnI5xWuF6nqhPcwvdo6f+XxagoKdkuSLNo6wy5UteTlKEWZeZVUAnAYgDMg3TTPm7QAWRhGOiMVXE1az3pybY5wwsj2nR9qlSOc8yQ4lgEc4lTRQThjl1xYSgDgkjmba7XMlvISdyARZoCPdkSaM7LXmi8zDHUlcoglkvMYvVzUChCA4UBGZH1j05DDDGJIK1o+QzzQqmhug6xWiiq4bY8pUpSqY6cYuzzfXTL1F8QvTY+fl6jdl1XUpqeaIvjfjKfO0brl5EvUAtkmY6rLSQk5GvF773ArLdMvAYkE3jhldj1AwbslhuNzksSXb/NVeUmCuolgamtK5Y0Oq6Qg5SS4ul7Q93CoSVyC1uqpqaigql6mqpGIgAHtFhlTSxYzZgdmqGnBgA3mrydboCmgAINMyamoBO2Cwy05yKakUxL5DUAxwyGApkNggAl7HNJwpgBmIAKtwn4CSJ9HlqkuYGL1KX5UwsakTUJo2OIIxFTqwi0Goy3rJkTTlHduyO0LwAMlmcGVJLVDPLvTHocSJYdQkvGmphgBQxXFOWISjJ+yuC/Vi6dJwd73LK0oSJayrPyaquQo0xsTUk84VYkkkkkkkkxDHqxA26y26bgsuYR0IEHaV8YU4X4DFO3EHl8BLXM8sXelnB7iYhUkS6xI2fi2mZNPUDYAx90XUCneEnY+LiQtC8xnI6AvZmYlQRDmyw2fQElRTnED7VPZpFylwyzWCWhvKgBpSuJNM6VONMBAATAAoABNIaNlThSagbYfOG4jEQAVHTHAdqE2d6/YfPqYeI64AKfarBMkNdmIyHpGB+6cj1QAMEwAOO9AQV826pGrEk1rtwGGyAC6L9HL/wBr9MBJPaO8jrPcICBq22IHGjEY3kV2Stc2UqRRt+B6DiIAZlaPklgySgoGN4oeUZs83F4KPWegYySFWuYFVixpge7VAQV5JaYMbmQNTOatbo81EqMcPK1RzZ7MoTqOo73eepG6jqSUzqlQa82WzVGysxqjbWGwwGHi95RV+b1CyHZc26KazrrSnTG0k7WUrChq4xqLzvWueFTAA9J0Z9WR13AD2tSAAxNHTT5oG9h4VgAeXRDnNlG4FvdAAVI0ZdFL56gB31gAd/6emu8d7HwpAB2liljzF7K98AD6qBkKQAewAKABQAKABQAKABQAKABQAKABq0WdJilXUMpzDAEdhgAqmluAkp6tIYy2+qasnvX17oAKZpXQlos9eUQ3frDnJ2jLrpABaZcwFUXDASyTXAUCkDefjVUAk7NaHAogJ3KT3QAdOtpbyVYdSr34xBI2NDWpvKcAbDMY+oAiAg7XgsT5U0DclfWT4RIBKcFpXnM56wO4QAFSdAWdfMrvZj3mAAuXYZS+TLQblFYACBAAoAFAAoAFAAoAFAAoAFAAoAFAAoAFAAoAFAAoAFAAoAFAAoAGrT5LfdPdABA8HPE95gAscACgAUACgAUACgAUACgAUACgAUACgAUACgAUACgAUACgAUACgAUACgA//9k=" alt="Nintendo Switch 2" class="prize-image"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="prize-name"&gt;Nintendo Switch 2&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="prize-description"&gt;Next-generation gaming console with immersive gameplay experience.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="prize-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="PlayStation 5 Pro" class="prize-image"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="prize-name"&gt;PlayStation 5 Pro&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="prize-description"&gt;The most powerful gaming console with stunning 8K graphics.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- INFO SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="info-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="info-title"&gt;How Winners Are Selected&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="info-content"&gt;Winners will be chosen after 24 hours from among the &lt;span class="highlight"&gt;most active traders&lt;/span&gt;. The more active you are in trading, the higher your chances of winning!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="info-content"&gt;We will contact the winners with pump.fun accounts via private message to arrange prize delivery.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- MOTIVATION SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="motivation-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="motivation-title"&gt;Your Next Trade Could Win You These Prizes!&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="motivation-content"&gt;Every trade you make increases your chances of winning these amazing gadgets.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="motivation-content"&gt;The most active traders have the best odds - so keep trading and you could be our next winner!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="motivation-content"&gt;No tickets to buy, no forms to fill - just trade as you normally would!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="cta-button"&gt;Start Trading Now!&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="how-to-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="how-to-title"&gt;How to Participate&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="steps"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="step-number"&gt;1&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Be an Active Trader&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Continue your trading activities on pump.fun. The more active you are, the better your chances.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="step-number"&gt;2&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Wait for Selection&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Winners are selected every 24 hours based on trading activity levels.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="step-number"&gt;3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Check Your Messages&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;If you win, we'll contact you via private message on pump.fun to arrange your prize delivery.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;© 2023 24HourLotto. All rights reserved. This is not a gambling site. Winners are selected based on trading activity on pump.fun.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Countdown timer</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateCountdown() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const nextDraw = new Date(now);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Set next draw to be 24 hours from now</p>
+<p class="p1"><span class="Apple-converted-space">            </span>nextDraw.setHours(now.getHours() + 24);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>nextDraw.setMinutes(0);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>nextDraw.setSeconds(0);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>nextDraw.setMilliseconds(0);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const timeRemaining = nextDraw - now;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (timeRemaining &lt;= 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// If countdown completes, reset to 24 hours</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('hours').textContent = '24';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('minutes').textContent = '00';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('seconds').textContent = '00';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const hours = Math.floor(timeRemaining / (1000 * 60 * 60));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('hours').textContent = hours.toString().padStart(2, '0');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initial update</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateCountdown();</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Update countdown every second</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setInterval(updateCountdown, 1000);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Add some animation to the CTA button</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelector('.cta-button').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert('Redirecting to pump.fun... Start trading to increase your chances!');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
